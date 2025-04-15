@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Game - Leaderboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .phone-container {
+            width: 320px;
+            height: 640px;
+            background-color: #0d1f2d;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 20px;
+            color: white;
+        }
+        
+        .header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-button {
+            font-size: 24px;
+            margin-right: 15px;
+            cursor: pointer;
+            color: #7f8c8d;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: white;
+            flex: 1;
+        }
+        
+        .leaderboard-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .leaderboard-item {
+            display: flex;
+            align-items: center;
+            background-color: #1a3040;
+            border-radius: 10px;
+            padding: 15px;
+            position: relative;
+        }
+        
+        .rank {
+            position: absolute;
+            right: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #7f8c8d;
+        }
+        
+        .player-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            overflow: hidden;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .player-avatar img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .player-info {
+            flex: 1;
+        }
+        
+        .player-name {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .player-points {
+            font-size: 22px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .player-avatar.sarah {
+            background-color: #9b59b6;
+        }
+        
+        .player-avatar.jason {
+            background-color: #e74c3c;
+        }
+        
+        .player-avatar.john {
+            background-color: #f39c12;
+        }
+        
+        .player-avatar.emma {
+            background-color: #1abc9c;
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 20px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #7f8c8d;
+        }
+        
+        .nav-item.active {
+            color: #3498db;
+        }
+        
+        .nav-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .nav-text {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="header">
+            <div class="back-button">&#10094;</div>
+            <h1>Leaderboard</h1>
+        </div>
+        
+        <div class="leaderboard-list">
+            <div class="leaderboard-item">
+                <div class="player-avatar sarah">
+                    <img src="/placeholder.svg?height=60&width=60" alt="Sarah">
+                </div>
+                <div class="player-info">
+                    <div class="player-name">Sarah</div>
+                    <div class="player-points">9,200</div>
+                </div>
+                <div class="rank">1</div>
+            </div>
+            
+            <div class="leaderboard-item">
+                <div class="player-avatar jason">
+                    <img src="/placeholder.svg?height=60&width=60" alt="Jason">
+                </div>
+                <div class="player-info">
+                    <div class="player-name">Jason</div>
+                    <div class="player-points">8,750</div>
+                </div>
+                <div class="rank">2</div>
+            </div>
+            
+            <div class="leaderboard-item">
+                <div class="player-avatar john">
+                    <img src="/placeholder.svg?height=60&width=60" alt="John">
+                </div>
+                <div class="player-info">
+                    <div class="player-name">John</div>
+                    <div class="player-points">7,850</div>
+                </div>
+                <div class="rank">3</div>
+            </div>
+            
+            <div class="leaderboard-item">
+                <div class="player-avatar emma">
+                    <img src="/placeholder.svg?height=60&width=60" alt="Emma">
+                </div>
+                <div class="player-info">
+                    <div class="player-name">Emma</div>
+                    <div class="player-points">6,900</div>
+                </div>
+                <div class="rank">4</div>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <a href="status.html" class="nav-item">
+                <div class="nav-icon">📊</div>
+                <div class="nav-text">Stats</div>
+            </a>
+            <a href="challenges.html" class="nav-item">
+                <div class="nav-icon">🏆</div>
+                <div class="nav-text">Challenges</div>
+            </a>
+            <a href="leaderboard.html" class="nav-item active">
+                <div class="nav-icon">🥇</div>
+                <div class="nav-text">Leaderboard</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

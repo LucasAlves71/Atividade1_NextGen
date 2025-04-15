@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Game - Player Stats</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .phone-container {
+            width: 320px;
+            height: 640px;
+            background-color: #0d1f2d;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #f39c12;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .avatar img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .profile-name {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .points {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .points-label {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar-container {
+            width: 100%;
+            height: 10px;
+            background-color: #1a3040;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            width: 60%;
+            background-color: #2ecc71;
+            border-radius: 5px;
+        }
+        
+        .level {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .percentage {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(#2ecc71 0% 60%, #1a3040 60% 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .percentage::before {
+            content: '';
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            background-color: #0d1f2d;
+            border-radius: 50%;
+        }
+        
+        .percentage-text {
+            position: relative;
+            z-index: 1;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 20px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #7f8c8d;
+        }
+        
+        .nav-item.active {
+            color: #3498db;
+        }
+        
+        .nav-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .nav-text {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="header">
+            <h1>Player stats</h1>
+        </div>
+        
+        <div class="profile">
+            <div class="avatar">
+                <img src="/placeholder.svg?height=100&width=100" alt="John Doe">
+            </div>
+            <h2 class="profile-name">John Doe</h2>
+            <div class="points">7,850</div>
+            <div class="points-label">points</div>
+        </div>
+        
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+        
+        <div class="level">Level 5</div>
+        
+        <div class="percentage">
+            <div class="percentage-text">60%</div>
+        </div>
+        
+        <div class="navigation">
+            <a href="status.html" class="nav-item active">
+                <div class="nav-icon">📊</div>
+                <div class="nav-text">Stats</div>
+            </a>
+            <a href="challenges.html" class="nav-item">
+                <div class="nav-icon">🏆</div>
+                <div class="nav-text">Challenges</div>
+            </a>
+            <a href="leaderboard.html" class="nav-item">
+                <div class="nav-icon">🥇</div>
+                <div class="nav-text">Leaderboard</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Game - Challenges</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .phone-container {
+            width: 320px;
+            height: 640px;
+            background-color: #0d1f2d;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 20px;
+            color: white;
+        }
+        
+        .header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .challenges-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .challenge-item {
+            display: flex;
+            align-items: center;
+            background-color: #1a3040;
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .challenge-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .challenge-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .challenge-icon.deal {
+            background-color: #3498db;
+        }
+        
+        .challenge-icon.client {
+            background-color: #e67e22;
+        }
+        
+        .challenge-icon.lead {
+            background-color: #f1c40f;
+        }
+        
+        .challenge-icon.demo {
+            background-color: #2ecc71;
+        }
+        
+        .challenge-info {
+            flex: 1;
+        }
+        
+        .challenge-name {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .challenge-points {
+            font-size: 22px;
+            font-weight: bold;
+            color: #f39c12;
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 20px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #7f8c8d;
+        }
+        
+        .nav-item.active {
+            color: #3498db;
+        }
+        
+        .nav-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .nav-text {
+            font-size: 12px;
+        }
+        
+        .car-icon {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .trophy-icon {
+            width: 40px;
+            height: 40px;
+            color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="header">
+            <h1>Challenges</h1>
+        </div>
+        
+        <div class="challenges-list">
+            <div class="challenge-item">
+                <div class="challenge-icon deal">
+                    <svg class="car-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 12V14H2V12C2 9.79086 3.79086 8 6 8H18C20.2091 8 22 9.79086 22 12Z" fill="white"/>
+                        <path d="M5 14L3 18V20H5V18H19V20H21V18L19 14H5Z" fill="white"/>
+                        <circle cx="7" cy="17" r="1" fill="#0d1f2d"/>
+                        <circle cx="17" cy="17" r="1" fill="#0d1f2d"/>
+                    </svg>
+                </div>
+                <div class="challenge-info">
+                    <div class="challenge-name">Close a Deal</div>
+                    <div class="challenge-points">2,000</div>
+                </div>
+            </div>
+            
+            <div class="challenge-item">
+                <div class="challenge-icon client">
+                    <svg class="car-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 12V14H2V12C2 9.79086 3.79086 8 6 8H18C20.2091 8 22 9.79086 22 12Z" fill="white"/>
+                        <path d="M5 14L3 18V20H5V18H19V20H21V18L19 14H5Z" fill="white"/>
+                        <circle cx="7" cy="17" r="1" fill="#0d1f2d"/>
+                        <circle cx="17" cy="17" r="1" fill="#0d1f2d"/>
+                    </svg>
+                </div>
+                <div class="challenge-info">
+                    <div class="challenge-name">Visit a Client</div>
+                    <div class="challenge-points">1,500</div>
+                </div>
+            </div>
+            
+            <div class="challenge-item">
+                <div class="challenge-icon lead">
+                    <svg class="trophy-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 21V16.8C5.2 15.9 3 13.4 3 10.5V5H21V10.5C21 13.4 18.8 15.9 16 16.8V21H8Z" fill="currentColor"/>
+                        <path d="M3 5H1V10.5H3M21 5H23V10.5H21" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="challenge-info">
+                    <div class="challenge-name">Qualify a Lead</div>
+                    <div class="challenge-points">1,000</div>
+                </div>
+            </div>
+            
+            <div class="challenge-item">
+                <div class="challenge-icon demo">
+                    <svg class="car-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 12V14H2V12C2 9.79086 3.79086 8 6 8H18C20.2091 8 22 9.79086 22 12Z" fill="white"/>
+                        <path d="M5 14L3 18V20H5V18H19V20H21V18L19 14H5Z" fill="white"/>
+                        <circle cx="7" cy="17" r="1" fill="#0d1f2d"/>
+                        <circle cx="17" cy="17" r="1" fill="#0d1f2d"/>
+                    </svg>
+                </div>
+                <div class="challenge-info">
+                    <div class="challenge-name">Give a Demo</div>
+                    <div class="challenge-points">750</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <a href="status.html" class="nav-item">
+                <div class="nav-icon">📊</div>
+                <div class="nav-text">Stats</div>
+            </a>
+            <a href="challenges.html" class="nav-item active">
+                <div class="nav-icon">🏆</div>
+                <div class="nav-text">Challenges</div>
+            </a>
+            <a href="leaderboard.html" class="nav-item">
+                <div class="nav-icon">🥇</div>
+                <div class="nav-text">Leaderboard</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
